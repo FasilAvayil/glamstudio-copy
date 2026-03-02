@@ -13,7 +13,7 @@ const testimonials = [
     {
         name: 'Karthik',
         role: 'Regular Customer',
-        content: "Precision haircut and a very relaxing atmosphere. Glam Studio is definitely my go-to place now.",
+        content: "Precision haircut and a very relaxing atmosphere. Glamz Studio is definitely my go-to place now.",
         rating: 5,
         image: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=1000&auto=format&fit=crop'
     },
@@ -32,9 +32,9 @@ const TestimonialCard = ({ testimonial }) => (
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
         transition={{ duration: 0.8 }}
-        className="glass-card p-8 rounded-xl relative border border-white/10 hover:border-glam-gold/30 transition-all duration-500 group w-full max-w-2xl mx-auto"
+        className="glass-card p-6 md:p-8 rounded-xl relative border border-white/10 hover:border-glam-gold/30 transition-all duration-500 group w-full max-w-2xl mx-auto"
     >
-        <Quote className="absolute top-6 right-8 text-glam-gold/20 h-12 w-12 group-hover:text-glam-gold/40 transition-colors" />
+        <Quote className="absolute top-6 right-6 md:right-8 text-glam-gold/20 h-10 w-10 md:h-12 md:w-12 group-hover:text-glam-gold/40 transition-colors" />
 
         <div className="flex flex-col md:flex-row items-center gap-6 mb-8 text-center md:text-left">
             <img

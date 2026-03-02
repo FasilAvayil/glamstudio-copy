@@ -2,35 +2,35 @@ import { motion } from 'framer-motion';
 
 const services = [
     {
-        title: 'Wedding Groom package',
-        description: 'Complete grooming package for grooms, including hair, beard, facial, manicure, and pedicure.',
-        image: 'https://images.unsplash.com/photo-1507679799987-c7177745821c?q=80&w=2670&auto=format&fit=crop',
-    },
-    {
         title: 'Classic Haircut',
         description: 'Expert cuts and precision styling for the modern man.',
-        image: 'https://images.unsplash.com/photo-1590540179852-2110a54f813a?q=80&w=2670&auto=format&fit=crop',
+        image: 'assets/images/classic-haircut.png',
     },
     {
         title: 'Beard Grooming',
         description: 'Masterful beard trimming, shaping, and hot towel treatment.',
-        image: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=2670&auto=format&fit=crop',
+        image: 'assets/images/beard-grooming.png',
     },
     {
         // Changed "Luxury Facial" to "HydraFacial" as per request
         title: 'HydraFacial',
-        description: 'Specialized skin treatment designed for men\'s skin health.',
-        image: 'https://images.unsplash.com/photo-1620331307300-985651c6b8eb?q=80&w=2672&auto=format&fit=crop',
+        description: 'Advanced deep-cleansing facial specially tailored for men’s skin.',
+        image: 'assets/images/hydral-facial.png',
     },
     {
         title: 'Hair Colouring',
         description: 'Professional coloring services from grey coverage to trend highlights.',
-        image: 'https://images.unsplash.com/photo-1620331311520-246422ff83f9?q=80&w=2572&auto=format&fit=crop',
+        image: 'assets/images/hair-coloring.png',
     },
     {
-        title: "Men's Hair Spa",
+        title: " Hair Spa",
         description: 'Relaxing hair spa treatment to nourish, repair, and revitalize your hair.',
-        image: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?q=80&w=2670&auto=format&fit=crop',
+        image: 'assets/images/hair-spa.png',
+    },
+    {
+        title: 'Wedding Groom package',
+        description: 'Complete grooming package for grooms, including hair, beard, facial, manicure, and pedicure.',
+        image: 'assets/images/wedding-groom.png',
     },
 ];
 
@@ -72,7 +72,7 @@ const Services = ({ onBookNow }) => {
 
                             <div className="absolute inset-x-6 bottom-6 p-6 rounded-xl glass border border-white/10 group-hover:translate-y-[-8px] transition-transform duration-500">
                                 <h3 className="text-xl font-serif text-white mb-2">{service.title}</h3>
-                                <p className="text-gray-300 text-sm leading-tight mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">
+                                <p className="text-gray-300 text-sm leading-tight mb-4 opacity-100 transition-opacity duration-500">
                                     {service.description}
                                 </p>
                                 <div className="flex justify-start">
@@ -87,6 +87,8 @@ const Services = ({ onBookNow }) => {
                         </motion.div>
                     ))}
                 </div>
+
+
             </div>
         </section>
     );

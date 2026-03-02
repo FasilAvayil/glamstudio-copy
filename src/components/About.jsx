@@ -28,8 +28,8 @@ const About = () => {
                         <div className="aspect-[4/5] rounded-2xl overflow-hidden relative z-10 border border-white/10">
                             <img
                                 // src="https://images.unsplash.com/photo-1593526612327-0479f646e3cb?q=80&w=2670&auto=format&fit=crop"
-                                src="assets/images/kid-getting-haircut-front-view.jpg"
-                                alt="Child getting a haircut"
+                                src="assets/images/our-story.png"
+                                alt="Child at Glamz Studio"
                                 className="w-full h-full object-cover"
                             />
                         </div>
@@ -52,7 +52,7 @@ const About = () => {
                             Crafting Beauty & Confidence
                         </h2>
                         <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                            At Glam Studio, we believe that beauty is a journey, not a destination. Our mission is to
+                            At Glamz Studio, we believe that beauty is a journey, not a destination. Our mission is to
                             provide exceptional beauty services in a luxurious, welcoming environment that makes you
                             feel like the best version of yourself.
                         </p>
@@ -65,11 +65,11 @@ const About = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                                    className="glass-card p-6 rounded-xl text-center"
+                                    className="glass-card p-4 md:p-6 rounded-xl text-center"
                                 >
                                     <div className="flex justify-center mb-2">{stat.icon}</div>
-                                    <div className="text-2xl font-bold text-white">{stat.value}</div>
-                                    <div className="text-xs text-gray-400 uppercase tracking-widest mt-1">{stat.label}</div>
+                                    <div className="text-xl md:text-2xl font-bold text-white">{stat.value}</div>
+                                    <div className="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest mt-1">{stat.label}</div>
                                     {stat.note && (
                                         <div className="text-[10px] text-glam-gold/80 italic mt-2 font-medium leading-relaxed max-w-[150px] mx-auto">
                                             {stat.note}
@@ -81,7 +81,7 @@ const About = () => {
 
                         <button
                             onClick={() => setIsModalOpen(true)}
-                            className="px-10 py-4 bg-glam-gold text-black font-bold tracking-widest hover:bg-white transition-all duration-300"
+                            className="px-8 py-3 text-sm md:px-10 md:py-4 md:text-base bg-glam-gold text-black font-bold tracking-widest hover:bg-white transition-all duration-300"
                         >
                             LEARN MORE
                         </button>

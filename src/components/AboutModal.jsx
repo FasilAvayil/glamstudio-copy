@@ -35,7 +35,7 @@ const AboutModal = ({ isOpen, onClose }) => {
                                 Discover More
                             </span>
                             <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 border-b border-glam-gold/10 pb-6">
-                                The Glam Studio Philosophy
+                                The Glamz Studio Philosophy
                             </h2>
 
                             <div className="space-y-8 text-gray-300">
@@ -70,7 +70,7 @@ const AboutModal = ({ isOpen, onClose }) => {
                                     <div>
                                         <h3 className="text-xl font-serif text-white mb-2">The Experience</h3>
                                         <p className="leading-relaxed">
-                                            From the moment you step into Glam Studio, the world outside fades away. Our space is curated to be a sensory retreat—with ambient lighting, premium aesthetics, and a team dedicated to your absolute comfort.
+                                            From the moment you step into Glamz Studio, the world outside fades away. Our space is curated to be a sensory retreat—with ambient lighting, premium aesthetics, and a team dedicated to your absolute comfort.
                                         </p>
                                     </div>
                                 </section>

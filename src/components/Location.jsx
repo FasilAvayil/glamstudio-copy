@@ -28,7 +28,7 @@ const Location = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="glass-card p-10 rounded-2xl relative overflow-hidden flex flex-col justify-between"
+                        className="glass-card p-6 md:p-10 rounded-2xl relative overflow-hidden flex flex-col justify-between"
                     >
                         <div className="relative z-10">
                             <h3 className="text-2xl font-serif text-white mb-8">Contact Information</h3>
@@ -40,7 +40,7 @@ const Location = () => {
                                     </div>
                                     <div>
                                         <h4 className="text-white font-bold mb-1">Our Address </h4>
-                                        <p className="text-gray-400 uppercase">Lagoon Mall, Derlakatte, Mangalore, Karnataka, India</p>
+                                        <p className="text-gray-400 uppercase">Lagoon Mall,near Kanachur Hospital, Badiyar, Deralakatte, Mangaluru, Karnataka 575018, India </p>
                                     </div>
                                 </div>
 
@@ -61,19 +61,33 @@ const Location = () => {
                                         <Clock className="text-glam-gold" size={20} />
                                     </div>
                                     <div>
-                                        <h4 className="text-white font-bold mb-1">Opening Hours</h4>
-                                        <p className="text-gray-400">Mon - Sat: 9:00 AM - 8:00 PM</p>
-                                        <p className="text-gray-400">Sunday: 10:00 AM - 6:00 PM</p>
-                                    </div>
-                                </div>
+                                        <h4 className="text-white font-bold mb-4 flex items-center gap-2">
+                                            Opening Hours
+                                            <div className="h-[1px] flex-1 bg-glam-gold/20" />
+                                        </h4>
+                                        <div className="space-y-3 max-w-sm">
+                                            {[
+                                                { day: 'Monday', time: '9:00 AM - 10:00 PM' },
+                                                { day: 'Tuesday', time: '9:00 AM - 10:00 PM' },
+                                                { day: 'Wednesday', time: '9:00 AM - 10:00 PM' },
+                                                { day: 'Thursday', time: '9:00 AM - 10:00 PM' },
+                                                { day: 'Friday', time: '9:00 AM - 10:00 PM' },
+                                                { day: 'Saturday', time: '9:00 AM - 10:00 PM' },
+                                                { day: 'Sunday', time: '9:00 AM - 10:00 PM', accent: true },
+                                            ].map((item, idx) => (
 
-                                <div className="flex items-start gap-4">
-                                    <div className="w-12 h-12 rounded-full glass-gold flex items-center justify-center shrink-0">
-                                        <Mail className="text-[#EA4335]" size={20} />
-                                    </div>
-                                    <div>
-                                        <h4 className="text-white font-bold mb-1">Email Us</h4>
-                                        <p className="text-gray-400">fasil@glamstudio.com</p>
+                                                <div key={idx} className="flex justify-between items-center group/hour">
+                                                    <span className={`text-sm tracking-widest uppercase ${item.accent ? 'text-glam-gold font-bold' : 'text-gray-400 group-hover/hour:text-white transition-colors'}`}>
+                                                        {item.day}
+                                                    </span>
+                                                    <div className="flex-1 mx-4 h-[1px] border-b border-dotted border-white/10" />
+                                                    <span className={`text-sm ${item.accent ? 'text-glam-gold font-bold' : 'text-gray-300'}`}>
+                                                        {item.time}
+                                                    </span>
+                                                </div>
+                                            ))}
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -94,29 +108,23 @@ const Location = () => {
                         </div>
                     </motion.div>
 
-                    {/* Map Placeholder */}
+                    {/* Map Box */}
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="relative min-h-[400px] lg:min-h-full rounded-2xl overflow-hidden border border-white/10 group"
+                        className="relative h-[450px] rounded-2xl overflow-hidden border border-white/10 group"
                     >
-                        <img
-                            src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=2666&auto=format&fit=crop"
-                            alt="Map Location"
-                            className="w-full h-full object-cover grayscale opacity-50 contrast-125 transition-transform duration-700 group-hover:scale-105"
+                        <iframe
+                            src="https://www.google.com/maps?q=Lagoon+Mall,+Derlakkatte,+Mangalore,+Karnataka,+India&z=19&output=embed"
+                            className="w-full h-full grayscale opacity-80 contrast-125 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+                            allowFullScreen
                         />
-                        <div className="absolute inset-0 bg-glam-dark/40" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="p-8 rounded-full glass-gold animate-pulse">
-                                <MapPin size={48} className="text-red-500" />
-                            </div>
-                        </div>
                     </motion.div>
                 </div>
-            </div >
-        </section >
+            </div>
+        </section>
     );
 };
 

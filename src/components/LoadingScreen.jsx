@@ -29,8 +29,10 @@ const LoadingScreen = () => {
                         ease: "easeInOut"
                     }}
                     className="text-glam-gold mb-8 flex justify-center"
+
                 >
-                    <Scissors size={64} className="drop-shadow-[0_0_15px_rgba(212,175,55,0.5)]" />
+                    <img src="assets/icons/final_logo1.png" alt="logo" className="h-32 w-32 object-contain" />
+                    {/* <Scissors size={64} className="drop-shadow-[0_0_15px_rgba(212,175,55,0.5)]" /> */}
                 </motion.div>
 
                 {/* Main Text */}
@@ -40,7 +42,7 @@ const LoadingScreen = () => {
                     transition={{ duration: 1, delay: 0.5 }}
                 >
                     <h1 className="text-5xl md:text-7xl font-serif font-bold tracking-[0.2em] text-white">
-                        <span className="text-glam-gold">GLAM</span>
+                        <span className="text-glam-gold">GLAMZ</span>
                     </h1>
                     <h2 className="text-3xl md:text-5xl font-serif mt-4 text-white tracking-[0.3em] font-light">
                         STUDIO
