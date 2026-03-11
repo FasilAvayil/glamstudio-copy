@@ -48,7 +48,7 @@ const Footer = () => {
                         <ul className="space-y-4 text-gray-400 text-sm">
                             <FooterLink text="Home" />
                             <FooterLink text="Salon Menu" />
-                            <FooterLink text="About Us" />
+                            <FooterLink text="About Us" href="#about" />
 
                             <FooterLink text="Contact" href="tel:+919567848426" />
                         </ul>
@@ -77,7 +77,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="h-5 w-5 text-blue-500 shrink-0" />
-                                <span>+91 9567848426</span>
+                                <span>+91 9980658535</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail className="h-5 w-5 text-red-500 shrink-0" />

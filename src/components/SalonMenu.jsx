@@ -75,12 +75,12 @@ const SalonMenu = () => {
                         title="Haircut & Styling"
                         icon={AnimatedScissors}
                         items={[
-                            { name: "Setting (Gel/Wax)", price: "79" },
-                            { name: "Buzz Cut", price: "99" },
+                            { name: "Setting (Gel/Wax)", price: "100" },
+                            { name: "Buzz Cut", price: "150" },
                             { name: "Wash Only", price: "99" },
                             { name: "Senior Citizen", price: "119" },
-                            { name: "Crew Cut", price: "149" },
-                            { name: "Stylish Haircut", price: "199" },
+                            { name: "Crew Cut", price: "150" },
+                            { name: "Stylish Haircut", price: "150" },
                             { name: "Undercut", price: "199" },
                             { name: "Wash + Blow Dry", price: "199" },
                             { name: "Low Fade / High Fade", price: "229" },
@@ -99,11 +99,11 @@ const SalonMenu = () => {
                         title="Shaving & Beard"
                         icon={AnimatedBeard}
                         items={[
-                            { name: "Sharp Razor Line Up", price: "79" },
-                            { name: "Normal Shaving", price: "99" },
-                            { name: "Beard Line Design", price: "99" },
-                            { name: "After Shave Face Massage", price: "99" },
-                            { name: "Foam Shaving", price: "119" },
+                            { name: "Sharp Razor Line Up", price: "120" },
+                            { name: "Normal Shaving", price: "120" },
+                            { name: "Beard Line Design", price: "120" },
+                            { name: "After Shave Face Massage", price: "120" },
+                            { name: "Foam Shaving", price: "120" },
                             { name: "Cold Towel Shaving", price: "129" },
                             { name: "Gel Shaving", price: "139" },
                             { name: "Basic Beard", price: "149" },

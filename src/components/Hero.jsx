@@ -81,11 +81,11 @@ const Hero = () => {
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
+            {/* <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
                 <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
                     <div className="w-1 h-3 bg-glam-gold rounded-full" />
                 </div>
-            </div>
+            </div> */}
         </section>
     );
 };
