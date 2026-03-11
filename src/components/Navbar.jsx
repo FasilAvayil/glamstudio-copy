@@ -42,17 +42,17 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'top-0 glass py-3 border-b border-white/5 shadow-lg' : 'top-0 bg-transparent py-5'}`}>
+        <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'top-0 glass py-1 md:py-3 border-b border-white/5 shadow-lg' : 'top-0 bg-transparent py-2 md:py-5'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     {/* Logo */}
-                    <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer group">
+                    <div className="flex-shrink-0 flex items-center gap-2 md:gap-3 cursor-pointer group">
                         {/* <AnimatedScissors className="h-9 w-9" animate={false} /> */}
-                        <img src="assets/icons/final_logo1.png" alt="logo" className="h-19 w-19 object-contain" />
+                        <img src="assets/icons/final_logo1.png" alt="logo" className="h-12 w-12 md:h-16 md:w-16 object-contain" />
 
                         <div className="flex flex-col">
                             <motion.div
-                                className="text-2xl font-serif font-bold tracking-wider flex items-center"
+                                className="text-lg md:text-2xl font-serif font-bold tracking-wider flex items-center"
                                 initial="hidden"
                                 animate="visible"
                                 variants={{
@@ -106,12 +106,17 @@ const Navbar = () => {
                                 key={link.name}
                                 href={link.href}
                                 onClick={(e) => {
-                                    if (link.href.startsWith('/#')) {
-                                        e.preventDefault();
+                                    if (link.href.includes('#')) {
                                         const id = link.href.split('#')[1];
-                                        const element = document.getElementById(id);
-                                        if (element) {
-                                            element.scrollIntoView({ behavior: 'smooth' });
+                                        if (id) {
+                                            const element = document.getElementById(id);
+                                            if (element) {
+                                                e.preventDefault();
+                                                element.scrollIntoView({ behavior: 'smooth' });
+                                            }
+                                        } else if (link.href === '#') {
+                                            e.preventDefault();
+                                            window.scrollTo({ top: 0, behavior: 'smooth' });
                                         }
                                     }
                                 }}
@@ -196,14 +201,26 @@ const Navbar = () => {
                                     key={link.name}
                                     href={link.href}
                                     onClick={(e) => {
-                                        setIsOpen(false);
-                                        if (link.href.startsWith('/#')) {
+                                        if (link.href.includes('#')) {
                                             e.preventDefault();
                                             const id = link.href.split('#')[1];
-                                            const element = document.getElementById(id);
-                                            if (element) {
-                                                element.scrollIntoView({ behavior: 'smooth' });
-                                            }
+                                            setIsOpen(false);
+                                            
+                                            // Handle scroll with a slight delay to allow menu animation to start
+                                            // and DOM to stabilize for scrollIntoView
+                                            setTimeout(() => {
+                                                if (id) {
+                                                    const element = document.getElementById(id);
+                                                    if (element) {
+                                                        element.scrollIntoView({ behavior: 'smooth' });
+                                                    }
+                                                } else {
+                                                    // Home case '#'
+                                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                                }
+                                            }, 200);
+                                        } else {
+                                            setIsOpen(false);
                                         }
                                     }}
                                     initial={{ opacity: 0, x: -20 }}

@@ -20,13 +20,13 @@ const Hero = () => {
                 </div>
             </motion.div>
 
-            <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8">
+            <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 pt-16 md:pt-0">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 >
-                    <h2 className="text-glam-gold uppercase tracking-[0.4em] mb-0 mt-16 text-sm md:text-lg font-bold">
+                    <h2 className="text-glam-gold uppercase tracking-[0.4em] mb-0 mt-4 md:mt-0 text-sm md:text-lg font-bold">
                         Premium Beauty & Wellness
                     </h2>
                 </motion.div>
