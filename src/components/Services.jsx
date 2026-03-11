@@ -19,7 +19,7 @@ const services = [
     },
     {
         title: 'Hair Colouring',
-        description: 'Professional coloring services from grey coverage to trend highlights.',
+        description: 'Professional hair coloring services from deep black shades to trendy highlights',
         image: 'assets/images/hair-coloring.png',
     },
     {

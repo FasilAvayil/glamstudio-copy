@@ -75,12 +75,21 @@ const SalonMenu = () => {
                         title="Haircut & Styling"
                         icon={AnimatedScissors}
                         items={[
-                            { name: "Haircut", price: "149" },
+                            { name: "Setting (Gel/Wax)", price: "79" },
+                            { name: "Buzz Cut", price: "99" },
+                            { name: "Wash Only", price: "99" },
+                            { name: "Senior Citizen", price: "119" },
+                            { name: "Crew Cut", price: "149" },
                             { name: "Stylish Haircut", price: "199" },
-                            { name: "Haircut with Styling", price: "99" },
+                            { name: "Undercut", price: "199" },
+                            { name: "Wash + Blow Dry", price: "199" },
+                            { name: "Low Fade / High Fade", price: "229" },
+                            { name: "Layer Cut", price: "249" },
                             { name: "Stylish Haircut with Styling", price: "249" },
-                            { name: "Hair Straightening", price: "999" },
-                            { name: "Hair Smoothing", price: "1499" },
+                            { name: "Ironing", price: "299" },
+                            { name: "Curling", price: "399" },
+                            { name: "Straightening", price: "999" },
+                            { name: "Smoothing", price: "1499" },
                             { name: "Keratin Treatment", price: "2499" },
                         ]} />
 
@@ -90,10 +99,24 @@ const SalonMenu = () => {
                         title="Shaving & Beard"
                         icon={AnimatedBeard}
                         items={[
+                            { name: "Sharp Razor Line Up", price: "79" },
                             { name: "Normal Shaving", price: "99" },
-                            { name: "Signature Shaving", price: "249" },
+                            { name: "Beard Line Design", price: "99" },
+                            { name: "After Shave Face Massage", price: "99" },
+                            { name: "Foam Shaving", price: "119" },
+                            { name: "Cold Towel Shaving", price: "129" },
+                            { name: "Gel Shaving", price: "139" },
                             { name: "Basic Beard", price: "149" },
+                            { name: "Hot Towel Shaving", price: "149" },
+                            { name: "Beard Oil Massage", price: "149" },
                             { name: "Stylish Beard", price: "199" },
+                            { name: "Signature Shaving", price: "249" },
+                            { name: "Charcoal Beard Clean Up", price: "249" },
+                            { name: "Beard Coloring (Black)", price: "299" },
+                            { name: "Beard Spa", price: "349" },
+                            { name: "Luxury Shaving (Premium Products)", price: "349" },
+                            { name: "Beard Coloring (Fashion Shade)", price: "399" },
+                            { name: "Beard Smoothening", price: "499" },
                         ]} />
 
                     {/* Hair Care & Wash */}
@@ -140,7 +163,6 @@ const SalonMenu = () => {
                             { name: "Head Massage (Coconut Oil)", price: "149" },
                             { name: "Head Massage (Navaratna Oil)", price: "199" },
                             { name: "Head Massage (Almond Oil)", price: "249" },
-                            { name: "Body Massage", price: "149" },
                         ]} />
 
                     {/* Coloring & Packages */}
@@ -151,11 +173,9 @@ const SalonMenu = () => {
                             { name: "Natural Black", price: "699" },
                             { name: "Dark Brown", price: "699" },
                             { name: "Medium Brown", price: "699" },
-                            { name: "By Question", price: "899" },
                             { name: "Basic Groom Package", price: "3999" },
                             { name: "Standard Groom Package", price: "4999" },
                             { name: "Premium Groom Package", price: "5999" },
-                            { name: "Grooming Service (Within 15km)", price: "4999" },
                         ]} />
 
                 </div>

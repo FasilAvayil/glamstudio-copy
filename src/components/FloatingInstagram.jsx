@@ -5,7 +5,7 @@ import { Instagram } from 'lucide-react';
 const FloatingInstagram = () => {
     return (
         <motion.a
-            href="https://www.instagram.com/glamz_studio_mangalore/"
+            href="https://www.instagram.com/glamzstudio_official?igsh=MTRtYXpld2M0NGM2cA=="
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, scale: 0.5, y: 50 }}

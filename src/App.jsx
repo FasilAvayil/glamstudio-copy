@@ -65,7 +65,7 @@ function App() {
               {/* <Route path="/salon-menu" element={<SalonMenu />} /> */}
             </Routes>
             <FloatingCall />
-            {/* <FloatingInstagram /> */}
+            <FloatingInstagram />
           </>
         )}
       </AnimatePresence>

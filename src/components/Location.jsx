@@ -67,13 +67,13 @@ const Location = () => {
                                         </h4>
                                         <div className="space-y-3 max-w-sm">
                                             {[
-                                                { day: 'Monday', time: '9:00 AM - 10:00 PM' },
-                                                { day: 'Tuesday', time: '9:00 AM - 10:00 PM' },
-                                                { day: 'Wednesday', time: '9:00 AM - 10:00 PM' },
-                                                { day: 'Thursday', time: '9:00 AM - 10:00 PM' },
-                                                { day: 'Friday', time: '9:00 AM - 10:00 PM' },
-                                                { day: 'Saturday', time: '9:00 AM - 10:00 PM' },
-                                                { day: 'Sunday', time: '9:00 AM - 10:00 PM', accent: true },
+                                                { day: 'Mon', time: '9:00 AM - 10:00 PM' },
+                                                { day: 'Tue', time: '9:00 AM - 10:00 PM' },
+                                                { day: 'Wed', time: '9:00 AM - 10:00 PM' },
+                                                { day: 'Thu', time: '9:00 AM - 10:00 PM' },
+                                                { day: 'Fri', time: '9:00 AM - 10:00 PM' },
+                                                { day: 'Sat', time: '9:00 AM - 10:00 PM' },
+                                                { day: 'Sun', time: '9:00 AM - 10:00 PM', accent: true },
                                             ].map((item, idx) => (
 
                                                 <div key={idx} className="flex justify-between items-center group/hour">
@@ -118,7 +118,7 @@ const Location = () => {
                     >
                         <iframe
                             src="https://www.google.com/maps?q=Lagoon+Mall,+Derlakkatte,+Mangalore,+Karnataka,+India&z=19&output=embed"
-                            className="w-full h-full grayscale opacity-80 contrast-125 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+                            className="w-full h-full transition-all duration-700"
                             allowFullScreen
                         />
                     </motion.div>
