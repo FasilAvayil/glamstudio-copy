@@ -50,7 +50,7 @@ const Location = () => {
                                     </div>
                                     <div>
                                         <h4 className="text-white font-bold mb-1">Phone Number</h4>
-                                        <p className="text-gray-400">+91 9567848426</p>
+                                        <p className="text-gray-400">+91 9980658535</p>
                                     </div>
                                 </div>
 

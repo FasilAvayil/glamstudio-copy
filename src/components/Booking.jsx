@@ -32,9 +32,6 @@ const Booking = ({ selectedService }) => {
     };
 
     const getOrdinal = (n) => {
-        const ordinals = ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"];
-        if (n <= 10) return ordinals[n - 1];
-
         const s = ["th", "st", "nd", "rd"];
         const v = n % 100;
         return n + (s[(v - 20) % 10] || s[v] || s[0]);
@@ -54,9 +51,17 @@ const Booking = ({ selectedService }) => {
         // Simulated delay for a premium feel
         await new Promise(resolve => setTimeout(resolve, 800));
 
-        // Handle booking counter
-        const currentCount = parseInt(localStorage.getItem('glam_booking_count') || '0') + 1;
-        localStorage.setItem('glam_booking_count', currentCount.toString());
+        // Handle daily booking counter
+        const today = new Date().toLocaleDateString('en-GB');
+        const lastBookingDate = localStorage.getItem('glam_booking_date');
+        let currentCount = 1;
+
+        if (lastBookingDate === today) {
+            currentCount = parseInt(localStorage.getItem('glam_daily_count') || '0') + 1;
+        }
+
+        localStorage.setItem('glam_booking_date', today);
+        localStorage.setItem('glam_daily_count', currentCount.toString());
         const ordinalText = getOrdinal(currentCount);
 
         const whatsappNumber = "919567848426";
@@ -82,15 +87,14 @@ const Booking = ({ selectedService }) => {
             day: 'numeric'
         });
 
-        const message = `NEW RESERVATION: GLAMZ STUDIO ✨%0A%0A` +
+        const message = `${currentCount}.NEW RESERVATION: GLAMZ STUDIO ✨%0A%0A` +
             `━━━━━━━━━━━━━━━━━━━━%0A` +
             `👤 CLIENT: ${name}%0A` +
             `📞 PHONE: ${phone}%0A` +
             `✂️ SERVICE: ${service}%0A` +
             `📅 APPOINTMENT: ${formattedDate}%0A` +
             `🕒 REQUESTED: ${currentTime}, ${requestDate}%0A` +
-            `━━━━━━━━━━━━━━━━━━━━%0A%0A` +
-            `🌟 This is my ${ordinalText.toLowerCase()} booking request. Looking forward to the experience!`;
+            `━━━━━━━━━━━━━━━━━━━━`;
 
         const url = `https://wa.me/${whatsappNumber}?text=${message}`;
         window.open(url, "_blank");
@@ -272,6 +276,10 @@ const Booking = ({ selectedService }) => {
                                 <h3 className="text-2xl font-serif font-bold text-white mb-4">Thank You for Choosing Glamz!</h3>
 
                                 <div className="text-left bg-white/5 p-4 rounded-lg border border-white/10 mb-6 space-y-3">
+                                    <div className="flex justify-between items-center text-[10px] sm:text-xs">
+                                        <span className="text-gray-400 uppercase tracking-widest font-medium">Serial No:</span>
+                                        <span className="text-glam-gold font-bold border-b border-glam-gold/30 pb-0.5">#{bookingSummary?.number?.toString().padStart(2, '0')}</span>
+                                    </div>
                                     <div className="flex justify-between items-center text-[10px] sm:text-xs">
                                         <span className="text-gray-400 uppercase tracking-widest font-medium">Client:</span>
                                         <span className="text-glam-gold font-bold border-b border-glam-gold/30 pb-0.5">{bookingSummary?.name}</span>

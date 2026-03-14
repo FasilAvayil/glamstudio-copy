@@ -8,7 +8,7 @@ const services = [
     },
     {
         title: 'Beard Grooming',
-        description: 'Masterful beard trimming, shaping, and hot towel treatment.',
+        description: 'Masterful beard trimming, detailed shaping, and relaxing hot towel finish',
         image: 'assets/images/beard-grooming.png',
     },
     {

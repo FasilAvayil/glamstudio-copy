@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 import FloatingCall from './components/FloatingCall';
 import LoadingScreen from './components/LoadingScreen';
 import SalonMenu from './components/SalonMenu';
-// import FloatingInstagram from './components/FloatingInstagram';
+import FloatingInstagram from './components/FloatingInstagram';
 
 
 function Home() {
@@ -65,7 +65,7 @@ function App() {
               {/* <Route path="/salon-menu" element={<SalonMenu />} /> */}
             </Routes>
             <FloatingCall />
-            {/* <FloatingInstagram /> */}
+            <FloatingInstagram />
           </>
         )}
       </AnimatePresence>

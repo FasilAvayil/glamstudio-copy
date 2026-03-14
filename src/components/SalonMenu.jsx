@@ -77,8 +77,6 @@ const SalonMenu = () => {
                         items={[
                             { name: "Setting (Gel/Wax)", price: "100" },
                             { name: "Buzz Cut", price: "150" },
-                            { name: "Wash Only", price: "99" },
-                            { name: "Senior Citizen", price: "119" },
                             { name: "Crew Cut", price: "150" },
                             { name: "Stylish Haircut", price: "150" },
                             { name: "Undercut", price: "199" },
@@ -113,7 +111,6 @@ const SalonMenu = () => {
                             { name: "Signature Shaving", price: "249" },
                             { name: "Charcoal Beard Clean Up", price: "249" },
                             { name: "Beard Coloring (Black)", price: "299" },
-                            { name: "Beard Spa", price: "349" },
                             { name: "Luxury Shaving (Premium Products)", price: "349" },
                             { name: "Beard Coloring (Fashion Shade)", price: "399" },
                             { name: "Beard Smoothening", price: "499" },
